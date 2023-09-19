@@ -1,0 +1,48 @@
+# CoMSES NetLogo Open Science Grid submit template
+# FIXME: convert to jinja and declare upfront what variables we can templatize for default "easy" OSG usage
+universe = container
+container_image = /cvmfs/singularity.opensciencegrid.org/comses/osg-netlogo:6.3.0
+
+# Job requirements - make sure we're running on a Singularity enabled node with enough resources to execute our code
+Requirements = HAS_SINGULARITY == True && OSG_HOST_KERNEL_VERSION >= 31000
+# FIXME: tune after running some test loads
+request_cpus = 1
+request_memory = 6 GB
+request_disk = 4 GB
+
+executable = run.sh
+# OSG currently bind mounts a writable scratch directory to /srv in the container
+# so that's where the stuff gets put
+arguments = "${MODEL_FILE} ${BEHAVIOR_SPACE_EXPERIMENT}"
+
+# XXX: enable for more "instant" debugging
+# stream_output = True
+# stream_error = True
+
+# If you leave out transfer_output_files, all generated files comes back
+transfer_input_files = ${MODEL_FILE_PATH}, run.sh
+transfer_output_files = ${BEHAVIOR_SPACE_EXPERIMENT}.csv
+# FIXME: multiple output files need to be specified one at a time in transfer_output_remaps
+transfer_output_remaps = "${BEHAVIOR_SPACE_EXPERIMENT}.csv = outputs/${BEHAVIOR_SPACE_EXPERIMENT}.$(ProcId).csv"
+
+# error and output are the error and output channels from your job
+# that HTCondor returns from the remote host.
+error = logs/$(Cluster).$(ProcId).error
+output = logs/$(Cluster).$(ProcId).output
+
+# The LOG file is where HTCondor places information about your
+# job's status, success, and resource consumption.
+log = logs/${BEHAVIOR_SPACE_EXPERIMENT}.$(ProcId).log
+
+# Send the job to Held state on failure. 
+#on_exit_hold = (ExitBySignal == True) || (ExitCode != 0)
+
+# Periodically retry the jobs every 1 hour, up to a maximum of 5 retries.
+#periodic_release =  (NumJobStarts < 5) && ((CurrentTime - EnteredCurrentStatus) > 60*60)
+
+# queue is the "start button" - it launches any jobs that have been
+# specified thus far.
+# FIXME: customize when scaling your workload
+# See https://chtc.cs.wisc.edu/uw-research-computing/multiple-jobs
+# for more info
+queue ${QUEUE_DIRECTIVE}

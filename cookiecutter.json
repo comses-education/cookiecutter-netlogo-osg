@@ -1,0 +1,19 @@
+{
+    "given_name": "Allen",
+    "family_name": "Lee",
+    "orcid": "https://orcid.org/0000-0002-1825-0097",
+    "affiliation": "https://ror.org/015bsfc29",
+    "email": "allen.lee@mailinator.com",
+    "github_username": "allen_lee",
+    "osg_username": "allen_lee",
+    "project_name": "My First FAIR+OSG NetLogo Model",
+    "model_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_').strip() }}",
+    "model_file": "{{ cookiecutter.model_slug + '.nlogo' }}",
+    "model_short_description": "A FAIR+OSG NetLogo model that tells a harrowing tale of turtles and grids",
+    "behavior_space_experiment": "osg_behavior_space_experiment",
+    "entrypoint_script": "run.sh",
+    "osg_queue_directive": "5",
+    "version": "1.0.0",
+    "create_citation_file": "y",
+    "license": ["Apache-2.0", "GPL-2.0-only", "GPL-2.0-or-later", "GPL-3.0-only", "GPL-3.0-or-later", "ISC", "MIT", "Not open source"]
+}
