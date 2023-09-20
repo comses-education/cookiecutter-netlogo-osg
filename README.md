@@ -25,20 +25,42 @@ The included Makefile has the following targets:
 Install [cruft](https://cruft.github.io/cruft/) via `$ pip install cruft` [or other methods](https://cruft.github.io/cruft/#installation) and run
 
 ```bash
-$ cruft create https://github.com/comses-education/cookiecutter-netlogo-osg
+cruft create https://github.com/comses-education/cookiecutter-netlogo-osg
 ```
 
 If upstream changes or improvements are made to this cookiecutter template you should be able to apply those changes by running
 
 ```bash
-$ cruft update
+cruft update
 ```
 
 ## FAIR4RS Principles
 
-More details at [our FAIR template repository's wiki](https://github.com/comses-education/fair-osg-template/wiki/FAIR-Principles-for-Research-Software).
+The FAIR Principles for Research Software [FAIR4RS](https://doi.org/10.15497/RDA00068) list the following objective:
 
-- [ ] **Findable**: create a persistent identifier for each released / published version of the software
-- [ ] **Accessible**: deposit your software in a [TRUSTed digital repository](https://www.coretrustseal.org/) like [Zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) or [the CoMSES.Net Computational Model Library](https://comses.net/codebases). Ensure that it is well annotated with descriptive metadata, and consider how to ensure that this metadata remains accessible even if the software itself is not
-- [ ] **Interoperable**: your model should read, write, and exchange data using domain-relevant open community standards (e.g., netCDF / HDF, plaintext CSVs, domain-specific controlled vocabularies or ontologies, etc.)
-- [ ] **Reusable**: Software can be executed and understood, modified, built upon, or incorporated into other software by [licensing it with an appropriate open source license](https://choosealicense.com). Include detailed provenance metadata, qualified persistent references to other software dependencies, and other domain-specific community standards or protocols for model documentation
+> The ultimate goal of FAIR is to increase the transparency, reproducibility, and reusability of research. For this to happen, software needs to be well-described (by metadata), inspectable, documented and appropriately structured so that it can be executed, replicated, built-upon, combined, reinterpreted, reimplemented, and/or used in different settings. The FAIR4RS Principles aim to guide software creators and owners on how to make their software FAIR. The FAIR4RS Principles are also relevant to the larger ecosystem and various stakeholders that support research software (e.g., repositories and registries).
+
+### Findable
+
+> Software and its associated metadata should be easy for both humans and machines to find.
+
+### Accessible
+
+> Software and its metadata is retrievable via standardized protocols.
+
+### Interoperable
+
+> Software interoperates with other software by exchanging data and/or metadata, and/or through interaction via application programming interfaces (APIs), described through standards.
+
+
+### Reusable
+
+> Software is both usable (can be executed) and reusable (can be understood, modified, built upon, or incorporated into other software).
+
+More details and concrete guidance on how to map the FAIR4RS Principles to your GitHub repository can be found at https://github.com/comses-education/fair-osg-template/wiki/FAIR-Principles-for-Research-Software but a basic checklist follows:
+
+- publish your software in a [TRUSTed digital repository](https://www.comses.net/resources/trusted-digital-repositories/). One convenient pathway from this github repo is to enable [Zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to mint a DOI for every GitHub release you create.
+- add comprehensive descriptive metadata and provenance metadata to your software and include explicit, persistent references to all of its software or data dependencies 
+- ensure that this descriptive metadata remains accessible even if the software itself is not
+- [select an appropriate open source license](https://choosealicense.com)
+- read, write, and exchange data using domain-relevant open community standards, e.g., netCDF / HDF, plaintext CSVs, and leverage [domain-specific controlled vocabularies / ontologies](http://esipfed.github.io/cor/) where possible
