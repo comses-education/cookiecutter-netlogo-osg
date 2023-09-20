@@ -3,8 +3,8 @@
 # USAGE: ./run.sh behavior_space_experiment_name
 
 CODE_DIR="${MODEL_CODE_DIR:-/srv}"
-NETLOGO_FILE="{{ cookiecutter.model_file }}"
-EXPERIMENT="${1:-{{ cookiecutter.behavior_space_experiment }}}"
+NETLOGO_FILE="${1:-{{ cookiecutter.model_file }}}"
+EXPERIMENT="${2:-{{ cookiecutter.behavior_space_experiment }}}"
 BEHAVIOR_SPACE_EXPERIMENTS_SETUP_FILE=${2:-none}
 
 # FIXME: this should be configurable
