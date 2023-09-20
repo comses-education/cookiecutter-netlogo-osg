@@ -27,3 +27,4 @@ OSG_SUBMIT_FILENAME="{{ cookiecutter.model_slug }}.sub"
 # for multiple behavior space experiments, use a queue directive like
 # OSG_QUEUE_DIRECTIVE="experiment from experiments.txt"
 OSG_QUEUE_DIRECTIVE="{{ cookiecutter.osg_queue_directive }}"
+JAVA_TOOL_OPTIONS="{{ cookiecutter.java_tool_options }}"

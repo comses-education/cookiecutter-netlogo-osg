@@ -1,0 +1,22 @@
+Bootstrap: docker
+From: comses/osg-netlogo:6.3.0
+Stage: spython-base
+
+%labels
+    author {{ cookiecutter.author }}
+    git-repository {{ cookiecutter.github_repository }}
+
+%environment
+    JAVA_TOOL_OPTIONS={{ cookiecutter.java_tool_options }}
+
+%help
+This container bundles the computational model code and dependencies for a CoMSES NetLogo model.
+
+%files
+    src /code
+    scripts /code
+    README.md /code
+    LICENSE /code
+
+%runscript
+	exec /opt/netlogo/netlogo-headless.sh "$@"

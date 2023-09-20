@@ -5,6 +5,8 @@
     "affiliation": "https://ror.org/015bsfc29",
     "email": "allen.lee@mailinator.com",
     "github_username": "allen_lee",
+    "github_repository": "https://github.com/comses-education/your-netlogo-osg-repo",
+    "java_tool_options": "-Xmx4G",
     "osg_username": "allen_lee",
     "project_name": "My First FAIR+OSG NetLogo Model",
     "model_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_').strip() }}",
@@ -15,5 +17,5 @@
     "osg_queue_directive": "5",
     "version": "1.0.0",
     "create_citation_file": "y",
-    "license": ["Apache-2.0", "GPL-2.0-only", "GPL-2.0-or-later", "GPL-3.0-only", "GPL-3.0-or-later", "ISC", "MIT", "Not open source"]
+    "license": ["Apache-2.0", "GPL-3.0-or-later", "ISC", "MIT", "Not open source"]
 }
