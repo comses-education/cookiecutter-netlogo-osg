@@ -1,11 +1,19 @@
 {
+    "contributors": {
+        "authors": ["Allen Lee", "Sean Bergin", "Marco Janssen", "Michael Barton"],
+        "orcids": ["https://orcid.org/0000-0002-6523-6079", "https://orcid.org/0000-0001-9576-7914", "https://orcid.org/0000-0002-1240-9052", "https://orcid.org/0000-0003-2561-1927"],
+        "roles": ["author", "curator", "investigator", "investigator"],
+        "github_usernames": ["test", "foo", "", ""],
+        "emails": ["al@mailinator.com", "sb@mailinator.com", "mj@mailinator.com", "mb@mailinator.com"],
+        "affiliations": ["https://ror.org/03efmqc40", "https://ror.org/022vq0k77", "https://ror.org/03efmqc40", "https://ror.org/03efmqc40"]
+    },
     "given_name": "Allen",
     "family_name": "Lee",
+    "full_name": "{{ f'{cookiecutter.given_name} {cookiecutter.family_name}' }}",
+    "email": "allen.lee@mailinator.com",
     "orcid": "https://orcid.org/0000-0002-1825-0097",
     "affiliation": "https://ror.org/015bsfc29",
-    "email": "allen.lee@mailinator.com",
-    "github_username": "allen_lee",
-    "github_repository": "https://github.com/comses-education/your-netlogo-osg-repo",
+    "github_repository": "https://github.com/your-github-username/your-netlogo-osg-repo",
     "java_tool_options": "-Xmx4G",
     "osg_username": "allen_lee",
     "project_name": "My First FAIR+OSG NetLogo Model",
@@ -17,5 +25,5 @@
     "osg_queue_directive": "5",
     "version": "1.0.0",
     "create_citation_file": "y",
-    "license": ["Apache-2.0", "GPL-3.0-or-later", "ISC", "MIT", "Not open source"]
+    "license": ["MIT", "Apache-2.0", "ISC", "GPL-3.0-or-later", "GPL-2.0-or-later", "NA"]
 }
