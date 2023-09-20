@@ -8,8 +8,9 @@ This repository provides opinionated scaffolding and support for [NetLogo models
   allocation needed!) to researchers conducting Open Science
 - [good practices for containerization and codebase organization](https://www.comses.net/education/responsible-practices/)
 
-Containerization recipes for [Docker](https://docs.docker.com) and [Apptainer](https://apptainer.org/) and containerized
-execution on the [Open Science Grid (OSG)](https://opensciencegrid.org/).
+Containerization recipes for [Docker](https://docs.docker.com), [Apptainer](https://apptainer.org/) and
+execution on the [Open Science Grid (OSG)](https://opensciencegrid.org/) are also included but may require additional
+customization.
 
 The included Makefile has the following targets:
 
@@ -18,6 +19,20 @@ The included Makefile has the following targets:
 - deploy
 - docker-build
 - docker-run
+
+## How to use this template
+
+Install [cruft](https://cruft.github.io/cruft/) via `$ pip install cruft` [or other methods](https://cruft.github.io/cruft/#installation) and run
+
+```bash
+$ cruft create https://github.com/comses-education/cookiecutter-netlogo-osg
+```
+
+If upstream changes or improvements are made to this cookiecutter template you should be able to apply those changes by running
+
+```bash
+$ cruft update
+```
 
 ## FAIR4RS Principles
 
