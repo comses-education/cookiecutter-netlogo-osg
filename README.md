@@ -34,6 +34,16 @@ If upstream changes or improvements are made to this cookiecutter template you s
 cruft update
 ```
 
+
+Directory structure:
+
+- src/ - Place your NetLogo file(s) in the `src/` directory.
+- inputs/ - Place your input data dependencies or document persistent URLs / DOIs / links to input data dependencies in the README
+- results/ - Place generated figures here
+- notebooks/ - Place interactive / Jupyter notebooks here.
+
+NOTE: Be aware of file size and take care not to [exceed your GitHub disk quota](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)
+ 
 ## FAIR4RS Principles
 
 The FAIR Principles for Research Software [FAIR4RS](https://doi.org/10.15497/RDA00068) list the following objective:
