@@ -15,7 +15,7 @@
     "affiliation": "https://ror.org/015bsfc29",
     "github_repository": "https://github.com/your-github-username/your-netlogo-osg-repo",
     "java_tool_options": "-Xmx4G",
-    "osg_username": "{{ cookiecutter.given_name + '.' + cookiecutter.family_name }}",
+    "osg_username": "{{ cookiecutter.given_name.lower() + '.' + cookiecutter.family_name.lower() }}",
     "project_name": "My First FAIR+OSG NetLogo Model",
     "model_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_').strip() }}",
     "model_file": "{{ cookiecutter.model_slug + '.nlogo' }}",
