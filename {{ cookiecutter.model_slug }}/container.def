@@ -3,14 +3,14 @@ From: comses/osg-netlogo:6.3.0
 Stage: spython-base
 
 %labels
-    author {{ cookiecutter.author }}
+    author {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
     git-repository {{ cookiecutter.github_repository }}
 
 %environment
     JAVA_TOOL_OPTIONS={{ cookiecutter.java_tool_options }}
 
 %help
-This container bundles the computational model code and dependencies for a CoMSES NetLogo model.
+This container bundles the code and dependencies for a NetLogo OSG model.
 
 %files
     src /code
