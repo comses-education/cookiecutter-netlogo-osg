@@ -9,7 +9,7 @@
     },
     "given_name": "Allen",
     "family_name": "Lee",
-    "full_name": "{{ f'{cookiecutter.given_name} {cookiecutter.family_name}' }}",
+    "full_name": "{{ cookiecutter.given_name + ' ' +  cookiecutter.family_name }}",
     "email": "allen.lee@mailinator.com",
     "orcid": "https://orcid.org/0000-0002-1825-0097",
     "affiliation": "https://ror.org/015bsfc29",
