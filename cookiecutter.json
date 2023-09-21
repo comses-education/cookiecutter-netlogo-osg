@@ -17,7 +17,7 @@
     "java_tool_options": "-Xmx4G",
     "osg_username": "{{ cookiecutter.given_name.lower() + '.' + cookiecutter.family_name.lower() }}",
     "project_name": "My First FAIR+OSG NetLogo Model",
-    "model_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_').strip() }}",
+    "model_slug": "{{ cookiecutter.project_name | slugify(max_length=32) }}",
     "model_file": "{{ cookiecutter.model_slug + '.nlogo' }}",
     "model_short_description": "A FAIR+OSG NetLogo model that tells a harrowing tale of turtles and grids",
     "behavior_space_experiment": "osg_behavior_space_experiment",
