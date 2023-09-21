@@ -18,8 +18,8 @@ MODEL_FILE={{ cookiecutter.model_file }}
 # `queue experiment from experiments.txt`
 # where `experiments.txt` is a textfile with 
 # one behavior space experiment per line
-BEHAVIOR_SPACE_EXPERIMENT={{ cookiecutter.behavior_space_experiment }}
-ENTRYPOINT_SCRIPT={{ cookiecutter.entrypoint_script }}
+BEHAVIOR_SPACE_EXPERIMENT="{{ cookiecutter.behavior_space_experiment }}"
+ENTRYPOINT_SCRIPT="{{ cookiecutter.entrypoint_script }}"
 # the submit file to be executed on OSG via `condor_submit ${OSG_SUBMIT_FILE}`
 OSG_SUBMIT_FILENAME="{{ cookiecutter.model_slug }}.sub"
 # Condor submit script's queue directive
