@@ -26,14 +26,45 @@ Install [cruft](https://cruft.github.io/cruft/) via `$ pip install cruft` [or ot
 
 ```bash
 cruft create https://github.com/comses-education/cookiecutter-netlogo-osg
+  [1/20] given_name (Allen): 
+  [2/20] family_name (Lee): 
+  [3/20] full_name (Allen Lee): 
+  [4/20] email (allen.lee@mailinator.com): allen.lee@asu.edu
+  [5/20] orcid (https://orcid.org/0000-0002-1825-0097): 
+  [6/20] affiliation (https://ror.org/015bsfc29): 
+  [7/20] github_repository (https://github.com/your-github-username/your-netlogo-osg-repo): 
+  [8/20] java_tool_options (-Xmx4G): 
+  [9/20] osg_username (allen.lee): 
+  [10/20] project_name (My First FAIR+OSG NetLogo Model): Wolf Sheep Predation          
+  [11/20] model_slug (wolf-sheep-predation): wolf-sheep
+  [12/20] model_file (wolf-sheep.nlogo): 
+  [13/20] model_short_description (A FAIR+OSG NetLogo model that tells a harrowing tale of turtles and grids): A FAIR+OSG NetLogo model that tells a harrowing tale of wolf and sheep.
+  [14/20] behavior_space_experiment (osg_behavior_space_experiment): osg_vary_food_gains
+  [15/20] entrypoint_script (run.sh): 
+  [16/20] osg_queue_directive (5): 10
+  [17/20] version (1.0.0): 
+  [18/20] create_citation_file (y): 
+  [19/20] Select license
+    1 - MIT
+    2 - Apache-2.0
+    3 - ISC
+    4 - GPL-3.0-or-later
+    5 - GPL-2.0-or-later
+    6 - NA
+    Choose from [1/2/3/4/5/6] (1): 1
+  [20/20] contributors (default): 
+>>> elapsed time 1m10s   
 ```
 
-If upstream changes or improvements are made to this cookiecutter template you should be able to apply those changes by running
+Answer the cookiecutter questions as needed (these can always be further customized in `config.mk` and place your NetLogo file in the `src/` directory. Your main NetLogo model file should be identical to what you entered or used as the default for the `model_file` field, so in the example above we should have a `src/wolf-sheep.nlogo` file present.
+
+When improvements are made to this cookiecutter template you can apply those changes by running
 
 ```bash
 cruft update
 ```
 
+in the directory of your cookiecutter generated template.
 
 Directory structure:
 
@@ -43,12 +74,20 @@ Directory structure:
 - notebooks/ - Place interactive / Jupyter notebooks here.
 
 NOTE: Be aware of file size and take care not to [exceed your GitHub disk quota](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)
+
+After generating your cookiecutter repository and adding your source NetLogo files and any input dependencies you can build an OSG submission package by running
+
+```bash
+make build
+```
+
+This will create a directory `osg-build` that contains all the things we'll want to copy over to your OSG access point, primarily bash scripts and HTCondor submission scripts. Feel free to edit these as needed, and if there are any additional use cases you think we should support in this template, please let us know!
  
 ## FAIR4RS Principles
 
-The FAIR Principles for Research Software [FAIR4RS](https://doi.org/10.15497/RDA00068) list the following objective:
-
 > The ultimate goal of FAIR is to increase the transparency, reproducibility, and reusability of research. For this to happen, software needs to be well-described (by metadata), inspectable, documented and appropriately structured so that it can be executed, replicated, built-upon, combined, reinterpreted, reimplemented, and/or used in different settings. The FAIR4RS Principles aim to guide software creators and owners on how to make their software FAIR. The FAIR4RS Principles are also relevant to the larger ecosystem and various stakeholders that support research software (e.g., repositories and registries).
+
+[Full text for the FAIR Principles for Research Software (FAIR4RS)](https://doi.org/10.15497/RDA00068) 
 
 ### Findable
 
