@@ -26,6 +26,11 @@ Install [cruft](https://cruft.github.io/cruft/) via `$ pip install cruft` [or ot
 
 ```bash
 cruft create https://github.com/comses-education/cookiecutter-netlogo-osg
+```
+
+Which should bring up output like the following:
+
+```bash
   [1/20] given_name (Allen): 
   [2/20] family_name (Lee): 
   [3/20] full_name (Allen Lee): 
@@ -56,7 +61,9 @@ cruft create https://github.com/comses-education/cookiecutter-netlogo-osg
 >>> elapsed time 1m10s   
 ```
 
-Answer the cookiecutter questions as needed (these can always be further customized in `config.mk` and place your NetLogo file in the `src/` directory. Your main NetLogo model file should be identical to what you entered or used as the default for the `model_file` field, so in the example above we should have a `src/wolf-sheep.nlogo` file present.
+Answer the cookiecutter questions as needed (don't stress if you don't put down the correct answer, these can always be further updated later via `cruft update -i`).
+
+Place your NetLogo file in the `src/` directory. Your main NetLogo model file should be identical to what you entered or used as the default for the `model_file` field, so in the example above we should have a `src/wolf-sheep.nlogo` file.
 
 When improvements are made to this cookiecutter template you can apply those changes by running
 
@@ -64,7 +71,13 @@ When improvements are made to this cookiecutter template you can apply those cha
 cruft update
 ```
 
-in the directory of your cookiecutter generated template.
+Or if you'd like to alter any of the values you entered, run
+
+```bash
+cruft update -i
+```
+
+in the root directory of your cookiecutter generated template.
 
 Directory structure:
 
