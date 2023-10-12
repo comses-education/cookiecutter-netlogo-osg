@@ -1,5 +1,4 @@
 # netlogo osg cookiecutter generated artifacts
-config.mk
 osg-build
 *.tmp.nlogo
 *~
