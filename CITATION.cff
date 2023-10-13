@@ -4,19 +4,35 @@
 cff-version: 1.2.0
 title: CoMSES.Net Cookiecutter FAIR+OSG template for NetLogo
 message: >-
-  If you use this cookiecutter template, please consider citing it using the
-  metadata from this file.
+  If you use this cookiecutter template, please consider
+  citing it using the metadata from this file.
 type: software
 authors:
   - given-names: Allen
     family-names: Lee
     orcid: 'https://orcid.org/0000-0002-6523-6079'
+    email: allen.lee@asu.edu
+    affiliation: 'https://ror.org/03efmqc40'
 identifiers:
   - type: url
-    value: 'https://github.com/comses-education/cookiecutter-netlogo-osg'
+    value: >-
+      https://github.com/comses-education/cookiecutter-netlogo-osg
     description: GitHub Repository
-url: >-
+repository-code: >-
   https://github.com/comses-education/cookiecutter-netlogo-osg
+url: 'https://comses.net/education'
 abstract: >-
-    This repository provides opinionated scaffolding for NetLogo models to help our research community adopt the FAIR for Research Software Principles. It also aims to support reproducible model execution and data analysis in high throughput computing environments via the Open Science Grid, and more broadly, good practices for research software development.
+  This repository provides opinionated scaffolding for
+  NetLogo models to help our research community adopt the
+  FAIR for Research Software Principles. It also aims to
+  support reproducible model execution and data analysis in
+  high throughput computing environments via the Open
+  Science Grid, and more broadly, good practices for
+  research software development.
+keywords:
+  - cookiecutter
+  - netlogo
+  - template
+  - opensciencegrid
 license: MIT
+date-released: '2023-10-13'
