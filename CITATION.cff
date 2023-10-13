@@ -2,7 +2,7 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: CoMSES' Cookiecutter FAIR+OSG template for NetLogo
+title: CoMSES.Net Cookiecutter FAIR+OSG template for NetLogo
 message: >-
   If you use this cookiecutter template, please consider citing it using the
   metadata from this file.
@@ -18,5 +18,5 @@ identifiers:
 url: >-
   https://github.com/comses-education/cookiecutter-netlogo-osg
 abstract: >-
-This repository provides opinionated scaffolding for NetLogo models to help our research community adopt the FAIR for Research Software Principles. It also aims to support reproducible model execution and data analysis in high throughput computing environments via the Open Science Grid, and more broadly, good practices for research software development.
+    This repository provides opinionated scaffolding for NetLogo models to help our research community adopt the FAIR for Research Software Principles. It also aims to support reproducible model execution and data analysis in high throughput computing environments via the Open Science Grid, and more broadly, good practices for research software development.
 license: MIT
