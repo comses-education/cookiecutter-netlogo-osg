@@ -31,7 +31,7 @@ APPTAINER_IMAGE_NAME ?= ${MODEL_NAME}-${CURRENT_VERSION}.sif
 
 all: build
 
-apptainer-build: $(APPTAINER_IMAGE_NAME)
+apptainer-build: $(CONTAINER_DEF)
 	apptainer build --fakeroot ${APPTAINER_IMAGE_NAME} ${CONTAINER_DEF}
 
 $(OSG_SUBMIT_FILENAME): $(OSG_SUBMIT_TEMPLATE) config.mk
@@ -48,7 +48,7 @@ $(OSG_SUBMIT_FILENAME): $(OSG_SUBMIT_TEMPLATE) config.mk
 	QUEUE_DIRECTIVE=${OSG_QUEUE_DIRECTIVE} \
 	envsubst < ${OSG_SUBMIT_TEMPLATE} > ${OSG_SUBMIT_FILENAME}
 
-docker-build: $(OSG_SUBMIT_FILENAME)
+docker-build: $(OSG_SUBMIT_FILENAME) Dockerfile
 	docker build -t "${DOCKER_IMAGE_NAME}" .
 
 build: ${BUILD_DIR}
