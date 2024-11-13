@@ -3,7 +3,7 @@
 This repository provides opinionated scaffolding and support for [NetLogo models](https://ccl.northwestern.edu/netlogo/) in an effort to help our research community adopt:
 
 - [the Findable, Accessible, Interoperable, and Reusable Principles for Research Software (FAIR4RS)](https://doi.org/10.15497/RDA00068)
-- [the Open Science Grid](https://osg-htc.org/), an open pool of compute resources contributed by university campuses,
+- [the Open Science Grid Consortium's](https://osg-htc.org/), [Open Science Pool (OSPool)](https://osg-htc.org/services/open_science_pool.html), an open access pool of compute resources contributed by university campuses,
   government-supported supercomputing institutions and research collaborations and available via fair-share access (no
   allocation needed!) to researchers conducting Open Science
 - [good practices for containerization and codebase organization](https://www.comses.net/education/responsible-practices/)
